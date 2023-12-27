@@ -2,7 +2,9 @@ defmodule IslandsInterfaceWeb.ErrorJSONTest do
   use IslandsInterfaceWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert IslandsInterfaceWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert IslandsInterfaceWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

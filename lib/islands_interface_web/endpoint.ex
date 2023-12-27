@@ -13,6 +13,11 @@ defmodule IslandsInterfaceWeb.Endpoint do
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 
+  # Old Style socket as used in the book - will add a LiveView too separately
+  socket "/socket", IslandsInterfaceWeb.UserSocket,
+    websocket: true,
+    longpoll: false
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phx.digest
